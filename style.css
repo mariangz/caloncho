@@ -1,0 +1,136 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #55ba89 0%, #eb92be 100%);
+  color: #fff;
+  font-family: "Cairo", sans-serif;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+/* HEADER */
+h1 {
+  text-align: center;
+}
+
+.header_title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.yellow-border {
+  border-bottom: 6px #f4e300 solid;
+}
+
+/* LADO IZQUIERDO */
+.figure {
+  padding: 0.7rem;
+  margin: auto;
+}
+
+.figure_image {
+  padding: 1rem;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LADO DERECHO */
+.figure_caption {
+  font-size: smaller;
+  text-align: center;
+}
+
+.description {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  padding: 0.5rem;
+  width: 450px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ul {
+  padding-left: 0;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.link {
+  display: inline-block;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  color: #fff;
+  text-decoration: none;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.link:hover,
+.link:focus {
+  transform: scale(1.2);
+}
+
+/* MEDIA QUERIES  */
+@media (min-width: 1200px) {
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header_div {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+  }
+
+  /* MAIN */
+  .main {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-figure {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  /* LADO DERECHO */
+  .section {
+    align-items: center;
+    display: flex;
+    width: 50%;
+  }
+  .figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .description {
+    padding: 0.5rem;
+    width: 450px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* LADO IZQUIERDO  */
+  .figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .figure_image {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
