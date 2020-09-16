@@ -13,21 +13,20 @@ body {
 }
 
 /* HEADER */
-h1 {
-  text-align: center;
-}
-
 .header_title {
+  margin-top: 2rem;
+  text-align: center;
   font-size: 4rem;
   margin-bottom: 1rem;
   padding: 0.5rem;
+  font-weight: bold;
 }
 
 .yellow-border {
   border-bottom: 6px #f4e300 solid;
 }
 
-/* LADO IZQUIERDO */
+/* LEFT SIDE */
 .figure {
   padding: 0.7rem;
   margin: auto;
@@ -35,18 +34,21 @@ h1 {
 
 .figure_image {
   padding: 1rem;
-  max-width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  height: auto;
+  max-width: 100%;
+  width: 150px;
+  height: 150px;
 }
 
-/* LADO DERECHO */
 .figure_caption {
   font-size: smaller;
   text-align: center;
 }
 
+/* RIGHT SIDE */
 .description {
   font-size: 0.9rem;
   line-height: 1.5rem;
@@ -55,18 +57,31 @@ h1 {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2rem;
+}
+
+p:nth-child(2) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .ul {
   padding-left: 0;
+  margin-top: 1rem;
 }
 
 .list {
   list-style-type: none;
+  display: inline-flex;
 }
 
 .link {
-  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.2rem;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0.4rem;
+  display: inline-flex;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   color: #fff;
@@ -76,13 +91,24 @@ h1 {
   transition-timing-function: ease-in-out;
 }
 
+.icon {
+  display: block;
+  margin-right: 0.5rem;
+}
+
 .link:hover,
 .link:focus {
   transform: scale(1.2);
 }
 
 /* MEDIA QUERIES  */
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
+  .figure_image {
+    width: 300px;
+    height: 300px;
+  }
+
+@media (min-width: 900px) {
   /* HEADER */
   .header {
     display: flex;
@@ -90,6 +116,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
   }
+
   .header_div {
     display: flex;
     justify-content: flex-start;
@@ -107,16 +134,13 @@ h1 {
     width: 50%;
   }
 
-  /* LADO DERECHO */
+  /* RIGHT SIDE */
   .section {
     align-items: center;
     display: flex;
     width: 50%;
   }
-  .figure {
-    margin-left: 0;
-    margin-right: 0;
-  }
+
   .description {
     padding: 0.5rem;
     width: 450px;
@@ -124,7 +148,8 @@ h1 {
     margin-left: 0;
     margin-right: 0;
   }
-  /* LADO IZQUIERDO  */
+
+  /* LEFT SIDE  */
   .figure {
     margin-left: 0;
     margin-right: 0;
@@ -132,5 +157,7 @@ h1 {
   .figure_image {
     margin-left: 0;
     margin-right: 0;
+    width: 450px;
+    height: 450px;
   }
 }
